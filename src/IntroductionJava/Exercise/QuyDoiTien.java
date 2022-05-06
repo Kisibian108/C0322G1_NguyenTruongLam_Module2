@@ -9,8 +9,8 @@ public class QuyDoiTien {
         Scanner sc = new Scanner(System.in);
         System.out.print("Moi ban nhap so tien USD: ");
         usd = sc.nextDouble();
-        double quydoi = usd * 23000;
-        System.out.print("Gia tri VND " + quydoi);
+        double Convert = usd * 23000;
+        System.out.print("Gia tri VND " + Convert);
     }
 
 }
