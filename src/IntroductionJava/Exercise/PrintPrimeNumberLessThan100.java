@@ -1,6 +1,6 @@
 package IntroductionJava.Exercise;
 
-public class CacSoNguyenToNhoHon100 {
+public class PrintPrimeNumberLessThan100 {
     public static void main(String[] args) {
         int n = 100;
         for (int i = 2; i <= n; i++) {
