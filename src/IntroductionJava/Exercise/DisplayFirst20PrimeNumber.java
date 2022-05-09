@@ -17,7 +17,7 @@ public class DisplayFirst20PrimeNumber {
                 }
                 N++;
             }
-            if (check) {
+            if (check ) {
                 System.out.print(number + " ");
                 count++;
             }

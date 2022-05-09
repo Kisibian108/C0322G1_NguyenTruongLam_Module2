@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TongCacSoCotXacDinh {
     public static void main(String[] args) {
-        //buoc 1
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Kich thuoc hang ma tran la: ");
         int i = scanner.nextInt();

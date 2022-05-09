@@ -12,7 +12,6 @@ public class GopMang {
         System.out.println("Nhap phan tu mang 1");
         int[] array1 = new int[size1];
 
-        int c = 0;
         for (int i = 0; i < size1; i++) {
             System.out.println("Phan tu thu " + i + " la: ");
             array1[i] = scanner.nextInt();
@@ -29,9 +28,8 @@ public class GopMang {
             array2[i] = scanner.nextInt();
         }
 
-
-
         int[] array3 = new int[size1+size2];
+        int c = 0;
 
         for (int i = 0; i < array1.length; i++) {
             array3[i] = array1[i];
