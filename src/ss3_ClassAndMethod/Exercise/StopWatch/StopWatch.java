@@ -1,4 +1,4 @@
-package ss3_ClassAndMethod.Exercise;
+package ss3_ClassAndMethod.Exercise.StopWatch;
 
 import java.util.Date;
 
@@ -11,7 +11,8 @@ public class StopWatch {
         return System.currentTimeMillis();
     }
 
-    public long stopTime(){
+    public long stopTime()
+    {
         return System.currentTimeMillis();
     }
 

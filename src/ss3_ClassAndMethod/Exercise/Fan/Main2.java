@@ -1,4 +1,6 @@
-package ss3_ClassAndMethod.Exercise;
+package ss3_ClassAndMethod.Exercise.Fan;
+
+import ss3_ClassAndMethod.Exercise.Fan.BuildFanClass;
 
 public class Main2 {
     public static void main(String[] args) {

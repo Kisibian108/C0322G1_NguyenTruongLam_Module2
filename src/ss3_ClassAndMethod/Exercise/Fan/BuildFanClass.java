@@ -1,4 +1,4 @@
-package ss3_ClassAndMethod.Exercise;
+package ss3_ClassAndMethod.Exercise.Fan;
 
 public class BuildFanClass {
     final int SLOW = 1, MEDIUM = 2, FAST = 3;

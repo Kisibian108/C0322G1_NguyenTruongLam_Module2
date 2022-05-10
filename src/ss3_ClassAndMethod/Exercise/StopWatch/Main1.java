@@ -1,8 +1,6 @@
-package ss3_ClassAndMethod.Exercise;
+package ss3_ClassAndMethod.Exercise.StopWatch;
 
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.Scanner;
+import ss3_ClassAndMethod.Exercise.StopWatch.StopWatch;
 
 public class Main1 {
     public static void main(String[] args) {

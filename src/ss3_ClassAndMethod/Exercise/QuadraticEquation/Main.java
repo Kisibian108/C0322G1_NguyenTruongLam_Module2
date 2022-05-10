@@ -1,4 +1,6 @@
-package ss3_ClassAndMethod.Exercise;
+package ss3_ClassAndMethod.Exercise.QuadraticEquation;
+
+import ss3_ClassAndMethod.Exercise.QuadraticEquation.BuildQuadraticEquationClass;
 
 import java.util.Scanner;
 

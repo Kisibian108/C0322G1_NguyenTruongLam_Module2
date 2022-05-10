@@ -1,4 +1,4 @@
-package ss3_ClassAndMethod.Exercise;
+package ss3_ClassAndMethod.Exercise.QuadraticEquation;
 
 public class BuildQuadraticEquationClass {
     double a, b, c;
