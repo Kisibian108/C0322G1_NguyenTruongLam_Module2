@@ -4,15 +4,10 @@ import ss3_ClassAndMethod.Exercise.Fan.BuildFanClass;
 
 public class Main2 {
     public static void main(String[] args) {
-        BuildFanClass buildFanClass1 = new BuildFanClass();
+        BuildFanClass buildFanClass1 = new BuildFanClass(true, 10, "Yellow", 3);
+        System.out.println("Fan is on" + buildFanClass1);
 
-        buildFanClass1.setColor("Yellow");
-        buildFanClass1.setRadius(10);
-        System.out.println(buildFanClass1.toString());
-
-        BuildFanClass buildFanClass2 = new BuildFanClass();
-        buildFanClass2.setColor("Blue");
-        buildFanClass2.setRadius(5);
-        System.out.println(buildFanClass2.toString1());
+        BuildFanClass buildFanClass2 = new BuildFanClass(false, 5, "Blue", 2);
+        System.out.println("Fan is off" + buildFanClass2);
     }
 }

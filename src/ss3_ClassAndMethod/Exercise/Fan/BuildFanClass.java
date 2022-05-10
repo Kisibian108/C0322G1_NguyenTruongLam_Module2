@@ -5,14 +5,24 @@ public class BuildFanClass {
     boolean on = false;
     double radius;
     String color;
+    int speed;
 
-    public BuildFanClass() {
+    public BuildFanClass(boolean on, double radius, String color, int speed) {
+        this.on = on;
+        this.radius = radius;
+        this.color = color;
+        this.speed = speed;
+    }
+
+    public BuildFanClass(boolean on, double radius, String color) {
+        this.on = true;
+        this.radius = radius;
+        this.color = color;
     }
 
     private int speed() {
         return SLOW;
     }
-
     private boolean status() {
         return false;
     }
@@ -24,7 +34,6 @@ public class BuildFanClass {
     private String color() {
         return "blue";
     }
-
 
     public void setRadius(double radius) {
         this.radius = radius;
@@ -56,19 +65,11 @@ public class BuildFanClass {
 
     @Override
     public String toString() {
-        return "BuildFanClass{" + " Fan is On" +
-                ", FAST=" + FAST +
+        return "{" +
+                "on=" + on +
                 ", radius=" + radius +
                 ", color='" + color + '\'' +
+                ", speed=" + speed +
                 '}';
     }
-
-    public String toString1() {
-        return "BuildFanClass{" + " Fan is Off" +
-                ", MEDIUM=" + MEDIUM +
-                ", radius=" + radius +
-                ", color='" + color + '\'' +
-                '}';
-    }
-
 }
