@@ -11,10 +11,10 @@ public class Main1 {
             sum += i;
         }
         long stopTime = stopWatch.stopTime();
-        long ElapseTime = stopTime - startTime;
+        long elapseTime = stopTime - startTime;
 
         System.out.println("Thoi gian bat dau la: " + startTime);
         System.out.println("Thoi gian ket thuc la: " + stopTime);
-        System.out.println("Thoi gian da chay la: " + ElapseTime);
+        System.out.println("Thoi gian da chay la: " + elapseTime);
     }
 }
