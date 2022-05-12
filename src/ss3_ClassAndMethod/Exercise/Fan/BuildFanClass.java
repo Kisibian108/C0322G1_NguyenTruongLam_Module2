@@ -71,7 +71,6 @@ public class BuildFanClass {
                     " radius=" + radius +
                     ", color='" + color + '\'' +
                     '}';
-
         }
     }
 }
