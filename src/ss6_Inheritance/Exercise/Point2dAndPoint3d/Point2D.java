@@ -1,5 +1,7 @@
 package ss6_Inheritance.Exercise.Point2dAndPoint3d;
 
+import java.util.Arrays;
+
 public class Point2D {
     private float x = 0.0f;
     private float y = 0.0f;
@@ -33,9 +35,8 @@ public class Point2D {
         this.y = y;
     }
 
-    public float [] getXY(){
-          float [] array = {this.x, this.y} ;
-          return  array  ;
+    public float []  getXY(){
+        return new float[]{this.x, this.y};
     }
 
     @Override
@@ -43,7 +44,7 @@ public class Point2D {
         return "Point2D{" +
                 "x=" + getX() +
                 ", y=" + getY() +
-                "xy = " + getXY() +
+                "xy = " + Arrays.toString(getXY()) +
                 '}';
     }
 }

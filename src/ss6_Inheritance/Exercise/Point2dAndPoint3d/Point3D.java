@@ -1,5 +1,7 @@
 package ss6_Inheritance.Exercise.Point2dAndPoint3d;
 
+import java.util.Arrays;
+
 public class Point3D extends Point2D{
     private float z = 0.0f;
 
@@ -20,6 +22,9 @@ public class Point3D extends Point2D{
     }
 
     public void setXYZ(float X, float Y, float Z){
+        float x = super.getX();
+        float y = super.getY();
+        float z = this.getZ();
     }
 
     public float [] getXYZ (){
@@ -29,8 +34,8 @@ public class Point3D extends Point2D{
     @Override
     public String toString() {
         return "Point3D{" +
-                "get XYZ =" + getXYZ() +
-                super.toString() +
+                "xyz=" + Arrays.toString(getXYZ()) +
                 '}';
     }
 }
+
