@@ -39,11 +39,7 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point{" +
-                "x=" + getX() +
-                ", y=" + getY() +
-                "get XY =" + getXY() +
-                '}';
+        return "(" + x + "," + y + ")";
     }
 }
 

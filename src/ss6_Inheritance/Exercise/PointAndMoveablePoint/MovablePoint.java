@@ -1,5 +1,7 @@
 package ss6_Inheritance.Exercise.PointAndMoveablePoint;
 
+import java.util.Arrays;
+
 public class MovablePoint extends Point {
     float xSpeed = 0.0f;
     float ySpeed = 0.0f;
@@ -34,24 +36,19 @@ public class MovablePoint extends Point {
         this.ySpeed = ySpeed;
     }
 
-    public void setSpeed (float xSpeed, float ySpeed){
-        this.xSpeed =xSpeed;
-        this.ySpeed =ySpeed;
+    public void setSpeed(float xSpeed, float ySpeed) {
+        this.xSpeed = xSpeed;
+        this.ySpeed = ySpeed;
     }
 
-    public float [] getSpeed(){
-        float [] array = {this.getxSpeed(),this.getySpeed() };
+    public float[] getSpeed() {
+        float[] array = {this.getxSpeed(), this.getySpeed()};
         return array;
     }
 
     @Override
     public String toString() {
-        return "MovablePoint{" +
-                "xSpeed=" + getxSpeed() +
-                ", ySpeed=" + getySpeed() +
-                ", x=" + getX() +
-                ", y=" + getY() +
-                '}';
+        return "(" + x + "," + y + ")" + "," + "speed" + "=" + "(" + xSpeed + "," + ySpeed + " )";
     }
 
     public MovablePoint move() {
