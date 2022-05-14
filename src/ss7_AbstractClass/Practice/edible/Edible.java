@@ -1,4 +1,4 @@
-package ss7_AbstractClass.edible;
+package ss7_AbstractClass.Practice.edible;
 
 public interface Edible {
     String howToEat();

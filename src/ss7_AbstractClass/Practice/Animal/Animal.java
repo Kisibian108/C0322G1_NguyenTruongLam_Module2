@@ -1,4 +1,4 @@
-package ss7_AbstractClass.Practice;
+package ss7_AbstractClass.Practice.Animal;
 
 import org.w3c.dom.ls.LSOutput;
 

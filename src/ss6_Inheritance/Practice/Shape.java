@@ -1,9 +1,10 @@
 package ss6_Inheritance.Practice;
 
-public class Shape {
+public class Shape implements Resizeable , Colorable{
 
-    private String color ="green";
+    private String color = "green";
     private boolean filled = true;
+
     public Shape() {
     }
 
@@ -35,4 +36,21 @@ public class Shape {
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
     }
+
+    public static void printShape(Shape[] shape) {
+        for (Shape x : shape) {
+            System.out.println(x.toString());
+        }
+    }
+
+    @Override
+    public void resize(double percent) {
+
+    }
+
+    @Override
+    public void howToColor() {
+
+    }
+
 }

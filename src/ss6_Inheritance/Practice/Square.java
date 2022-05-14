@@ -1,6 +1,9 @@
 package ss6_Inheritance.Practice;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Resizeable, Colorable  {
+
+    double side;
+
     public Square() {
     }
 
@@ -29,9 +32,18 @@ public class Square extends Rectangle {
 
     @Override
     public String toString() {
-        return "A Square with side="
-                + getSide()
-                + ", which is a subclass of "
-                + super.toString();
+        return "Area of Square : "
+                + getArea() + "";
+    }
+
+    @Override
+    public void resize(double percent) {
+        super.width *= percent /100;
+        super.length *= percent /100;
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four side");
     }
 }

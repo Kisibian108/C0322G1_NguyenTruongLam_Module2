@@ -1,6 +1,6 @@
 package ss6_Inheritance.Practice;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements Resizeable {
     double width;
     double length;
 
@@ -36,16 +36,25 @@ public class Rectangle extends Shape{
         this.length = length;
     }
 
-    public double getArea(){
+    public double getArea() {
         return this.width * this.length;
     }
 
-    public double getPerimeter(){
+    public double getPerimeter() {
         return (this.width + this.length) * 2;
     }
 
     @Override
     public String toString() {
-        return "A Rectangle with" +getWidth() +" and"+ getLength() +" which is a subclass of " + super.toString() ;
+        return "Area of Rectangle: " + getArea();
     }
+
+    @Override
+    public void resize(double percent) {
+        this.length *= (percent /100 );
+        this.width *= (percent /100);
+    }
+
+
+
 }

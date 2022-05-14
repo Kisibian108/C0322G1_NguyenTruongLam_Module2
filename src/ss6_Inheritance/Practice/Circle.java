@@ -1,6 +1,6 @@
 package ss6_Inheritance.Practice;
 
-public class Circle extends Shape{
+public class Circle extends Shape implements Resizeable, Colorable {
     double radius = 1;
 
     public Circle() {
@@ -23,16 +23,22 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
-    public double getArea(){
+    public double getArea() {
         return Math.PI * this.radius * this.radius;
     }
 
-    public double getPerimeter(){
+    public double getPerimeter() {
         return Math.PI * 2 * this.radius;
     }
 
     @Override
     public String toString() {
-        return "A Circle with" +  getRadius() + "which is a subclass of " + super.toString();
+        return "Area of Circle : " + getArea();
     }
+
+    @Override
+    public void resize(double percent) {
+        this.radius *= (percent /100 );
+    }
+
 }
