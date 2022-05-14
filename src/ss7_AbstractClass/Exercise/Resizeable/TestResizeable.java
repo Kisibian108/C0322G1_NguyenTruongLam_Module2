@@ -23,7 +23,6 @@ public class TestResizeable {
         System.out.println("Sau khi thay doi kich thuoc la: ");
         for (Shape shape1 : shape) {
             shape1.resize(Math.random() * 1000);
-            ;
         }
         Shape.printShape(shape);
     }

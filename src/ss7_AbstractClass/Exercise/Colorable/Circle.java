@@ -3,7 +3,7 @@ package ss7_AbstractClass.Exercise.Colorable;
 import ss6_Inheritance.Practice.Shape;
 import ss7_AbstractClass.Exercise.Resizeable.Resizeable;
 
-public class Circle extends Shape implements Resizeable, Colorable {
+public class Circle extends Shape implements Colorable {
     double radius = 1;
 
     public Circle() {
@@ -18,20 +18,8 @@ public class Circle extends Shape implements Resizeable, Colorable {
         this.radius = radius;
     }
 
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
     public double getArea() {
         return Math.PI * this.radius * this.radius;
-    }
-
-    public double getPerimeter() {
-        return Math.PI * 2 * this.radius;
     }
 
     @Override

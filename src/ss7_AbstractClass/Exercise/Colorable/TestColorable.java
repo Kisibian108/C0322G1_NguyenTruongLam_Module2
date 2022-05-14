@@ -8,10 +8,11 @@ import ss7_AbstractClass.Exercise.Colorable.Colorable;
 
 public class TestColorable {
     public static void main(String[] args) {
-        Shape[] shape = new Shape[3];
+        Shape[] shape = new Shape[4];
         shape[0] = new Square(5);
-        shape[1] = new Circle("Green", false, 3);
-        shape[2] = new Rectangle(3.5, 2.6);
+        shape[1] = new Square(8);
+        shape[2] = new Circle("Green", false, 3);
+        shape[3] = new Rectangle(3.5, 2.6);
 
         System.out.println("Dien tich la: ");
         for (Shape shape1 : shape) {

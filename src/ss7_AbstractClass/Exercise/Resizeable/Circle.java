@@ -3,7 +3,7 @@ package ss7_AbstractClass.Exercise.Resizeable;
 import ss6_Inheritance.Practice.Shape;
 import ss7_AbstractClass.Exercise.Colorable.Colorable;
 
-public class Circle extends Shape implements Resizeable, Colorable {
+public class Circle extends Shape implements Resizeable {
     double radius = 1;
 
     public Circle() {
@@ -41,7 +41,7 @@ public class Circle extends Shape implements Resizeable, Colorable {
 
     @Override
     public void resize(double percent) {
-        this.radius *= (percent /100 );
+        this.radius *= (percent / 100);
     }
 
 }

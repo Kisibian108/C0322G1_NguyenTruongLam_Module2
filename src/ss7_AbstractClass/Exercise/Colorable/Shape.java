@@ -2,7 +2,7 @@ package ss7_AbstractClass.Exercise.Colorable;
 
 import ss7_AbstractClass.Exercise.Resizeable.Resizeable;
 
-public class Shape implements Resizeable, Colorable {
+public class Shape {
 
     private String color = "green";
     private boolean filled = true;
@@ -38,21 +38,4 @@ public class Shape implements Resizeable, Colorable {
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
     }
-
-    public static void printShape(Shape[] shape) {
-        for (Shape x : shape) {
-            System.out.println(x.toString());
-        }
-    }
-
-    @Override
-    public void resize(double percent) {
-
-    }
-
-    @Override
-    public void howToColor() {
-
-    }
-
 }

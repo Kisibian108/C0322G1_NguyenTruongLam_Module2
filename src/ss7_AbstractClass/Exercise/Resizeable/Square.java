@@ -3,7 +3,7 @@ package ss7_AbstractClass.Exercise.Resizeable;
 import ss6_Inheritance.Practice.Rectangle;
 import ss7_AbstractClass.Exercise.Colorable.Colorable;
 
-public class Square extends Rectangle implements Resizeable, Colorable {
+public class Square extends Rectangle implements Resizeable {
 
     double side;
 
@@ -41,12 +41,7 @@ public class Square extends Rectangle implements Resizeable, Colorable {
 
     @Override
     public void resize(double percent) {
-        super.width *= percent /100;
-        super.length *= percent /100;
-    }
-
-    @Override
-    public void howToColor() {
-        System.out.println("Color all four side");
+        super.width *= percent / 100;
+        super.length *= percent / 100;
     }
 }

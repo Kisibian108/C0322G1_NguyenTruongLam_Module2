@@ -3,7 +3,7 @@ package ss7_AbstractClass.Exercise.Colorable;
 import ss6_Inheritance.Practice.Shape;
 import ss7_AbstractClass.Exercise.Resizeable.Resizeable;
 
-public class Rectangle extends Shape implements Resizeable {
+public class Rectangle extends Shape {
     double width;
     double length;
 
@@ -23,14 +23,6 @@ public class Rectangle extends Shape implements Resizeable {
         this.length = length;
     }
 
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
     public double getLength() {
         return length;
     }
@@ -43,10 +35,6 @@ public class Rectangle extends Shape implements Resizeable {
         return this.width * this.length;
     }
 
-    public double getPerimeter() {
-        return (this.width + this.length) * 2;
-    }
-
     @Override
     public String toString() {
         return "Area of Rectangle: " + getArea();
@@ -54,10 +42,7 @@ public class Rectangle extends Shape implements Resizeable {
 
     @Override
     public void resize(double percent) {
-        this.length *= (percent /100 );
-        this.width *= (percent /100);
+        this.length *= (percent / 100);
+        this.width *= (percent / 100);
     }
-
-
-
 }
