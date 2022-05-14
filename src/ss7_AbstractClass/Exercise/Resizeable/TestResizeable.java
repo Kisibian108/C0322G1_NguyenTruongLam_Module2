@@ -1,4 +1,4 @@
-package ss6_Inheritance.Practice;
+package ss7_AbstractClass.Exercise.Resizeable;
 
 import ss6_Inheritance.Practice.Circle;
 import ss6_Inheritance.Practice.Rectangle;

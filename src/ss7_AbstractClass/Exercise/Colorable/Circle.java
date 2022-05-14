@@ -1,6 +1,6 @@
-package ss6_Inheritance.Practice;
+package ss7_AbstractClass.Exercise.Colorable;
 
-import ss7_AbstractClass.Exercise.Colorable.Colorable;
+import ss6_Inheritance.Practice.Shape;
 import ss7_AbstractClass.Exercise.Resizeable.Resizeable;
 
 public class Circle extends Shape implements Resizeable, Colorable {

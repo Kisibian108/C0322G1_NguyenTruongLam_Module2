@@ -1,10 +1,10 @@
-package ss6_Inheritance.Practice;
+package ss7_AbstractClass.Exercise.Resizeable;
 
-import ss7_AbstractClass.Exercise.Resizeable.Resizeable;
+import ss6_Inheritance.Practice.Shape;
 
 public class Rectangle extends Shape implements Resizeable {
-    protected double width;
-    protected double length;
+    double width;
+    double length;
 
     public Rectangle() {
         this.width = 1;

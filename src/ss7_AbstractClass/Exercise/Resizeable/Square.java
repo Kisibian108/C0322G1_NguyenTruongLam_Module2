@@ -1,7 +1,7 @@
-package ss6_Inheritance.Practice;
+package ss7_AbstractClass.Exercise.Resizeable;
 
+import ss6_Inheritance.Practice.Rectangle;
 import ss7_AbstractClass.Exercise.Colorable.Colorable;
-import ss7_AbstractClass.Exercise.Resizeable.Resizeable;
 
 public class Square extends Rectangle implements Resizeable, Colorable {
 

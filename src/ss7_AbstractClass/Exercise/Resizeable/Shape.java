@@ -1,7 +1,6 @@
-package ss6_Inheritance.Practice;
+package ss7_AbstractClass.Exercise.Resizeable;
 
 import ss7_AbstractClass.Exercise.Colorable.Colorable;
-import ss7_AbstractClass.Exercise.Resizeable.Resizeable;
 
 public class Shape implements Resizeable, Colorable {
 
