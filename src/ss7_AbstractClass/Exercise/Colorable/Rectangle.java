@@ -3,7 +3,7 @@ package ss7_AbstractClass.Exercise.Colorable;
 import ss6_Inheritance.Practice.Shape;
 import ss7_AbstractClass.Exercise.Resizeable.Resizeable;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Colorable {
     double width;
     double length;
 

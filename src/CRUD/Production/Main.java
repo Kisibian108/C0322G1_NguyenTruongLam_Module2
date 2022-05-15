@@ -1,4 +1,4 @@
-package CRUD;
+package CRUD.Production;
 
 import java.util.Scanner;
 
@@ -6,16 +6,18 @@ public class Main {
     public static Product[] productList = new Product[100];
     public static int count;
     static Scanner scanner = new Scanner(System.in);
+
     static {
         System.out.println("Block static");
         productList[0] = new Product(1, "Iphone", 1000, 10, "Apple");
         productList[1] = new Product(2, "Xiaomi", 500, 5, "China");
-        productList[2] = new Product(3,"Macbook", 900, 8, "Apple");
-        productList[3] = new Product(4, "GalaxyS3", 700, 7,"Samsung");
+        productList[2] = new Product(3, "Macbook", 900, 8, "Apple");
+        productList[3] = new Product(4, "GalaxyS3", 700, 7, "Samsung");
         productList[4] = new Product(5, "Dell", 300, 5, "Intel");
         count = 5;
     }
-    public static void addNewProduct(){
+
+    public static void addNewProduct() {
         System.out.println("Nhap ten: ");
         String name = scanner.nextLine();
 
@@ -30,23 +32,26 @@ public class Main {
 
         System.out.println("Them san pham thanh cong!");
 
-        productList[count] = new Product(count+1, name, price, amount, production);;
+        Product product = new Product(count + 1, name, price, amount, production);
+        ;
+        productList[count] = product;
         count++;
-
+        displayList();
     }
-    public static void displayList(){
-        for (Product item: productList) {
-            if(item != null){
+
+    public static void displayList() {
+        for (Product item : productList) {
+            if (item != null) {
                 System.out.println(item);
             }
         }
     }
 
-    public static void edit(){
+    public static void edit() {
         System.out.println("Nhap ID muon sua: ");
         int id = Integer.parseInt(scanner.nextLine());
         for (Product item : productList) {
-            if(item.getId() == id){
+            if (item.getId() == id) {
                 System.out.print("nhap id: ");
                 item.setId(Integer.parseInt(scanner.nextLine()));
 
@@ -63,21 +68,22 @@ public class Main {
                 item.setProduction(scanner.nextLine());
 
                 break;
+            }
         }
-        }
+        displayList();
     }
 
-    public static void delete(){
+    public static void delete() {
         System.out.println("Nhap id muon xoa: ");
         int id = Integer.parseInt(scanner.nextLine());
 
-        for (int i = id-1 ; i < productList.length -1 ; i++) {
-                 productList [i] = productList[ i + 1];
+        for (int i = id - 1; i < productList.length - 1; i++) {
+            productList[i] = productList[i + 1];
         }
-        }
+    }
 
     private static boolean checkNameExists(String name) {
-        for (Product item: productList) {
+        for (Product item : productList) {
             if (item != null && item.getName().contains(name)) {
                 return true;
             }
@@ -85,12 +91,12 @@ public class Main {
         return false;
     }
 
-    public static void search(){
+    public static void search() {
         System.out.println("Nhap ten can tim kiem: ");
         String name = scanner.nextLine();
         if (checkNameExists(name)) {
-            for (Product item: productList) {
-                if( item != null && item.getName().contains(name)){
+            for (Product item : productList) {
+                if (item != null && item.getName().contains(name)) {
                     System.out.println(item);
                 }
             }
@@ -110,7 +116,7 @@ public class Main {
             System.out.println("6. Exit ");
             System.out.println("Choose options: ");
             int choose = Integer.parseInt(scanner.nextLine());
-            switch (choose){
+            switch (choose) {
                 case 1:
                     displayList();
                     break;
@@ -129,6 +135,6 @@ public class Main {
                 case 6:
                     System.exit(0);
             }
-        }while (true);
+        } while (true);
     }
 }
