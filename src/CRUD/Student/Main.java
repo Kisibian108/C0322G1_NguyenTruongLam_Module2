@@ -8,7 +8,7 @@ public class Main {
 
     static Scanner scanner = new Scanner(System.in);
 
-    static  {
+    static {
         System.out.println("Block static");
         personList[0] = new Student(1, "Lam", 30, true, 80);
         personList[1] = new Student(2, "Hai", 33, true, 80);
@@ -70,13 +70,39 @@ public class Main {
                 break;
         }
     }
-        public static void delete(){
-            System.out.println("Xoa id nao:");
-            int id = Integer.parseInt(scanner.nextLine());
-            for (Person x :personList) {
 
-            }
+    public static void delete() {
+        System.out.println("Xoa id nao:");
+        int id = Integer.parseInt(scanner.nextLine());
+        for (int i = id - 1; i < personList.length - 1; i++) {
+            personList[i] = personList[i + 1];
         }
+        displayList();
+    }
+
+    public static void search() {
+        System.out.println("Nhap ten can tim kiem: ");
+        System.out.println("1:Hoc sinh " + "\n" + "2:Giao vien");
+        int input = Integer.parseInt(scanner.nextLine());
+        switch (input) {
+            case 1:
+                System.out.println("Nhap ten can tim");
+                String name = scanner.nextLine();
+                for (Person x : personList) {
+                    if (x != null && x.getName().contains(name)) {
+                        System.out.println(x);
+                    }
+                }
+            case 2:
+                System.out.println("Nhap ten can tim");
+                String name2 = scanner.nextLine();
+                for (Person x : personList) {
+                    if (x != null && x.getName().contains(name2)) {
+                        System.out.println(x);
+                    }
+                }
+        }
+    }
 
     public static void main(String[] args) {
         do {
@@ -97,8 +123,10 @@ public class Main {
                 case 3:
                     delete();
                     break;
+                case 4:
+                    search();
+                    break;
             }
         } while (true);
     }
-
 }
