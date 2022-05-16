@@ -1,7 +1,8 @@
-package ss8_CleanCode.Practice;
+package ss8_CleanCode.Practice.Bai1;
 
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import ss8_CleanCode.Practice.Bai1.Calculator;
 
 
 import static org.junit.jupiter.api.Assertions.*;
