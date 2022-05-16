@@ -31,10 +31,7 @@ public class TennisGame {
             }
         } else if (isaBoolean1(scorePlayer1, scorePlayer2)) {
             int minusResult = scorePlayer1 - scorePlayer2;
-            if (isaBoolean(minusResult)) score = "Advantage player1";
-            else if (isaBoolean1(minusResult)) score = "Advantage player2";
-            else if (isaBoolean2(minusResult)) score = "Win for player1";
-            else score = "Win for player2";
+            score = getString(minusResult);
         } else {
             for (int i = INT1; i < INT3; i++) {
                 if (isaBoolean(i)) tempScore = scorePlayer1;
@@ -58,6 +55,15 @@ public class TennisGame {
                 }
             }
         }
+        return score;
+    }
+
+    private static String getString(int minusResult) {
+        String score;
+        if (isaBoolean(minusResult)) score = "Advantage player1";
+        else if (isaBoolean1(minusResult)) score = "Advantage player2";
+        else if (isaBoolean2(minusResult)) score = "Win for player1";
+        else score = "Win for player2";
         return score;
     }
 
