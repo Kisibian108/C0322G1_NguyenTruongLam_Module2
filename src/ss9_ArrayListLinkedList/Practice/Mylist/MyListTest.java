@@ -2,6 +2,8 @@ package ss9_ArrayListLinkedList.Practice.Mylist;
 
 import ss9_ArrayListLinkedList.Practice.Mylist.MyList;
 
+import java.util.*;
+
 public class MyListTest {
     public static void main(String[] args) {
         MyList<Integer> listInterger = new MyList<Integer>();
@@ -10,6 +12,8 @@ public class MyListTest {
         listInterger.add(3);
         listInterger.add(3);
         listInterger.add(9);
+
+        List<Integer> list = new ArrayList<>();
 
         System.out.println("element 4: " + listInterger.get(4));
         System.out.println("element 1: " + listInterger.get(1));

@@ -52,20 +52,23 @@ public class Main {
         int id = Integer.parseInt(scanner.nextLine());
         for (Product item : productList) {
             if (item.getId() == id) {
-                System.out.print("nhap id: ");
-                item.setId(Integer.parseInt(scanner.nextLine()));
+                item.setId(id);
 
                 System.out.println("Nhap ten muon sua: ");
-                item.setName(scanner.nextLine());
+                String name = scanner.nextLine();
+                item.setName(name);
 
                 System.out.println("Nhap gia muon sua: ");
-                item.setPrice(Double.parseDouble(scanner.nextLine()));
+                double price = Double.parseDouble(scanner.nextLine());
+                item.setPrice(price);
 
                 System.out.println("Nhap so luong muon sua: ");
-                item.setAmount(Integer.parseInt(scanner.nextLine()));
+                int amount = Integer.parseInt(scanner.nextLine());
+                item.setAmount(amount);
 
                 System.out.println("Nhap nha san xuat muon sua: ");
-                item.setProduction(scanner.nextLine());
+                String production = scanner.nextLine();
+                item.setProduction(production);
 
                 break;
             }

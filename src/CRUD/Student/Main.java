@@ -77,7 +77,6 @@ public class Main {
         for (int i = id - 1; i < personList.length - 1; i++) {
             personList[i] = personList[i + 1];
         }
-        displayList();
     }
 
     public static void search() {
