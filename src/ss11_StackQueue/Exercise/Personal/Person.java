@@ -1,4 +1,4 @@
-package ss11_StackQueue.Exercise.Demerging;
+package ss11_StackQueue.Exercise.Personal;
 
 public class Person implements Comparable<Person> {
     private String name;
