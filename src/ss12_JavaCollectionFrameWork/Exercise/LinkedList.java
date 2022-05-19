@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class LinkedList  {
+public class LinkedList {
 
     public static int count;
     static Scanner scanner = new Scanner(System.in);
@@ -15,9 +15,10 @@ public class LinkedList  {
         System.out.println("Block static");
 
         productList.add(new Product(1, "Iphone", 3000, 10, "Apple"));
-        productList.add(new Product(2, "Iphone", 1000, 10, "Apple"));
-        productList.add(new Product(3, "Iphone", 2000, 10, "Apple"));
-        productList.add(new Product(4, "Iphone", 500, 10, "Apple"));
+        productList.add(new Product(2, "Xiaomi", 1000, 10, "Apple"));
+        productList.add(new Product(3, "Samsung", 2000, 10, "Apple"));
+        productList.add(new Product(4, "Macbook", 500, 10, "Apple"));
+        count = 4;
     }
 
     public static void addNewProduct() {
@@ -80,9 +81,7 @@ public class LinkedList  {
     public static void delete() {
         System.out.println("Nhap id muon xoa: ");
         int id = Integer.parseInt(scanner.nextLine());
-        for (int i = id - 1; i < productList.size() - 1; i++) {
-            var remove = productList.remove(i);
-        }
+        productList.remove(id - 1);
     }
 
     private static boolean checkNameExists(String name) {
@@ -134,6 +133,7 @@ public class LinkedList  {
                     break;
                 case 4:
                     delete();
+                    displayList();
                     break;
                 case 5:
                     edit();
