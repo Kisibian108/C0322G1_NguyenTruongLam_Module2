@@ -40,7 +40,7 @@ public class Person implements Comparable<Person> {
 
     @Override
     public String toString() {
-        return "Demerging{" +
+        return "Person{" +
                 "name='" + name + '\'' +
                 ", gender=" + gender +
                 ", date='" + date + '\'' +

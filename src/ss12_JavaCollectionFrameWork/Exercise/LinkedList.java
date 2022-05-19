@@ -1,12 +1,15 @@
 package ss12_JavaCollectionFrameWork.Exercise;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
-public class Main {
+public class LinkedList  {
 
     public static int count;
     static Scanner scanner = new Scanner(System.in);
-    static List<Product> productList = new ArrayList<>();
+    static List<Product> productList = new java.util.LinkedList<>();
 
     static {
         System.out.println("Block static");
@@ -106,7 +109,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Collections.sort(productList);
+
         do {
             System.out.println("------------Production Management---------");
             System.out.println("1. Display list Product");
@@ -142,11 +145,12 @@ public class Main {
                 case 7:
                     Collections.sort(productList, new Comparator());
                     displayList();
-                    break;
                 case 8:
                     System.exit(0);
             }
         } while (true);
 
     }
+
+
 }

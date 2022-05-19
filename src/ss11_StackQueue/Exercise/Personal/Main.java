@@ -11,6 +11,7 @@ public class Main {
         list.add(new Person("Linh", true, 1987));
         list.add(new Person("Hien", false, 1989));
         list.add(new Person("Hoai", false, 1992));
+        System.out.println("Truoc khi sap xep:");
         Collections.sort(list);
 
         for (Person x : list) {
