@@ -16,23 +16,23 @@ public class Main {
         for (Person x : list) {
             System.out.println(x);
         }
-        Queue<Person> queueNu = new LinkedList<>();
-        Queue<Person> queueNam = new LinkedList<>();
+        Queue<Person> queueGirl = new LinkedList<>();
+        Queue<Person> queueBoy = new LinkedList<>();
 
         for (Person x : list) {
             if (!x.isGender()) {
-                queueNu.add(x);
+                queueGirl.add(x);
             } else {
-                queueNam.add(x);
+                queueBoy.add(x);
             }
         }
 
         Queue<Person> person = new LinkedList<>();
-        while (!queueNu.isEmpty()) {
-            person.add(queueNu.poll());
+        while (!queueGirl.isEmpty()) {
+            person.add(queueGirl.poll());
         }
-        while (!queueNam.isEmpty()) {
-            person.add(queueNam.poll());
+        while (!queueBoy.isEmpty()) {
+            person.add(queueBoy.poll());
         }
         System.out.println("Sau khi sap xep: ");
         for (Person x : person) {
