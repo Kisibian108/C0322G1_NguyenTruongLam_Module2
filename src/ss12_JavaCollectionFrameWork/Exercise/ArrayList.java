@@ -2,11 +2,11 @@ package ss12_JavaCollectionFrameWork.Exercise;
 
 import java.util.*;
 
-public class Main {
+public class ArrayList {
 
     public static int count;
     static Scanner scanner = new Scanner(System.in);
-    static List<Product> productList = new ArrayList<>();
+    static List<Product> productList = new java.util.ArrayList<>();
 
     static {
         System.out.println("Block static");
