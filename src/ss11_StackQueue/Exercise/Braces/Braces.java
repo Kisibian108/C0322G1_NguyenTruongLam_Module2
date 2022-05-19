@@ -8,7 +8,7 @@ public class Braces {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap bieu thuc:");
         String expression = scanner.nextLine();
-        boolean flag = false;
+        boolean flag = true;
 
         Stack<Object> stack = new Stack<>();
         for (int i = 0; i < expression.length(); i++) {
@@ -16,12 +16,13 @@ public class Braces {
                 stack.push('(');
             } else if (expression.charAt(i) == ')') {
                 if (stack.empty()) {
-                    flag = true;
+                    flag = false;
+                    break;
                 }
                 stack.pop();
             }
         }
-        if (flag || !stack.empty()) {
+        if (!flag || !stack.empty()) {
             System.out.println("Sai");
         } else {
             System.out.println("Dung");

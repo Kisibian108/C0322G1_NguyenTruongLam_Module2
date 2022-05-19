@@ -15,6 +15,10 @@ public abstract class Person {
         this.gender = gender;
     }
 
+    public Person(String lam, boolean b, int i) {
+    }
+
+
     public int getId() {
         return id;
     }
