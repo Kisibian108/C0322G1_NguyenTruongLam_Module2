@@ -24,7 +24,6 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     @Override
     public void add(int index, E e) {
         ensureCapacity();
-
         for (int i = count - 1; i >= index; i--){
             elements[i + 1] = elements[i];
         }

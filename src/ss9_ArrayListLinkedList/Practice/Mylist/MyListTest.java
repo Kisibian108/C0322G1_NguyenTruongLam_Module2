@@ -13,8 +13,6 @@ public class MyListTest {
         listInterger.add(3);
         listInterger.add(9);
 
-        List<Integer> list = new ArrayList<>();
-
         System.out.println("element 4: " + listInterger.get(4));
         System.out.println("element 1: " + listInterger.get(1));
         System.out.println("element 2: " + listInterger.get(2));
