@@ -1,23 +1,20 @@
-package ss12_JavaCollectionFrameWork.Exercise;
+package ss12_JavaCollectionFrameWork.Exercise.Product1;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-public class LinkedList {
+public class ArrayList {
 
     public static int count;
     static Scanner scanner = new Scanner(System.in);
-    static List<Product> productList = new java.util.LinkedList<>();
+    static List<Product> productList = new java.util.ArrayList<>();
 
     static {
         System.out.println("Block static");
 
         productList.add(new Product(1, "Iphone", 3000, 10, "Apple"));
-        productList.add(new Product(2, "Xiaomi", 1000, 10, "Apple"));
-        productList.add(new Product(3, "Samsung", 2000, 10, "Apple"));
-        productList.add(new Product(4, "Macbook", 500, 10, "Apple"));
-        count = 4;
+        productList.add(new Product(2, "Iphone", 1000, 10, "Apple"));
+        productList.add(new Product(3, "Iphone", 2000, 10, "Apple"));
+        productList.add(new Product(4, "Iphone", 500, 10, "Apple"));
     }
 
     public static void addNewProduct() {
@@ -81,6 +78,7 @@ public class LinkedList {
         System.out.println("Nhap id muon xoa: ");
         int id = Integer.parseInt(scanner.nextLine());
         productList.remove(id - 1);
+        displayList();
     }
 
     private static boolean checkNameExists(String name) {
@@ -107,7 +105,6 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-
         do {
             System.out.println("------------Production Management---------");
             System.out.println("1. Display list Product");
@@ -132,7 +129,6 @@ public class LinkedList {
                     break;
                 case 4:
                     delete();
-                    displayList();
                     break;
                 case 5:
                     edit();
@@ -144,6 +140,7 @@ public class LinkedList {
                 case 7:
                     Collections.sort(productList, new ComparatorSortByPrice());
                     displayList();
+                    break;
                 case 8:
                     System.exit(0);
             }

@@ -1,4 +1,4 @@
-package ss12_JavaCollectionFrameWork.Exercise;
+package ss12_JavaCollectionFrameWork.Exercise.Product1;
 
 public class Product implements Comparable<Product> {
     private int id;
