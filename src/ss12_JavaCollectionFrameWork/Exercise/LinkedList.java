@@ -1,6 +1,5 @@
 package ss12_JavaCollectionFrameWork.Exercise;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
@@ -143,7 +142,7 @@ public class LinkedList {
                     displayList();
                     break;
                 case 7:
-                    Collections.sort(productList, new Comparator());
+                    Collections.sort(productList, new ComparatorSortByPrice());
                     displayList();
                 case 8:
                     System.exit(0);
@@ -151,6 +150,4 @@ public class LinkedList {
         } while (true);
 
     }
-
-
 }

@@ -77,9 +77,8 @@ public class ArrayList {
     public static void delete() {
         System.out.println("Nhap id muon xoa: ");
         int id = Integer.parseInt(scanner.nextLine());
-        for (int i = id - 1; i < productList.size() - 1; i++) {
-            var remove = productList.remove(i);
-        }
+        productList.remove(id - 1);
+        displayList();
     }
 
     private static boolean checkNameExists(String name) {
@@ -106,7 +105,6 @@ public class ArrayList {
     }
 
     public static void main(String[] args) {
-        Collections.sort(productList);
         do {
             System.out.println("------------Production Management---------");
             System.out.println("1. Display list Product");
@@ -140,7 +138,7 @@ public class ArrayList {
                     displayList();
                     break;
                 case 7:
-                    Collections.sort(productList, new Comparator());
+                    Collections.sort(productList, new ComparatorSortByPrice());
                     displayList();
                     break;
                 case 8:
