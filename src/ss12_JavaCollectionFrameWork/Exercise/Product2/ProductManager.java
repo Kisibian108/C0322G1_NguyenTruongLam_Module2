@@ -18,7 +18,6 @@ public class ProductManager {
         count = 5;
     }
 
-
     public static void display() {
         for (Product item : list) {
             if (item != null)
