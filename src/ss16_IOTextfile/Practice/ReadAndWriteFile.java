@@ -1,10 +1,10 @@
-package ss16_IOTextfile.Exercise;
+package ss16_IOTextfile.Practice;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FindMax {
+public class ReadAndWriteFile {
     public List<Integer> readFile(String filePath){
         List<Integer> numbers = new ArrayList<>();
         try {
@@ -13,7 +13,6 @@ public class FindMax {
             if (!file.exists()) {
                 throw new FileNotFoundException();
             }
-
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line = "";
             while ((line = br.readLine()) != null) {
