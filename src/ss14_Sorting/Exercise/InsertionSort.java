@@ -1,9 +1,9 @@
-package ss13_Sorting.Exercise;
+package ss14_Sorting.Exercise;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class InsertionSort2 {
+public class InsertionSort {
     public static void insertionSort(int[] array) {
         int pos, x;
         for (int i = 1; i < array.length; i++) { //đoạn array[0] đã sắp xếp

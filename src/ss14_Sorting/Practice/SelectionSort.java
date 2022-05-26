@@ -1,4 +1,4 @@
-package ss13_Sorting.Practice;
+package ss14_Sorting.Practice;
 
 public class SelectionSort {
     static double[] list = {1, 9, 4.5, 6.6, 5.7, -4.5};

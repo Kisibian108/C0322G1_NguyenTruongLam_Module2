@@ -1,4 +1,4 @@
-package ss13_Sorting.Practice;
+package ss14_Sorting.Practice;
 
 import java.util.Scanner;
 

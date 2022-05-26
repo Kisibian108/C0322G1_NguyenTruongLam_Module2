@@ -1,4 +1,4 @@
-package ss13_Sorting.Practice;
+package ss14_Sorting.Practice;
 
 public class BubbleSorting {
         static int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
