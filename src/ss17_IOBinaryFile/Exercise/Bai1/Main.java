@@ -19,7 +19,7 @@ public class Main {
         list.add(new Product(4, "GalaxyS3", 700, 7, "Samsung"));
         list.add(new Product(5, "Dell", 300, 5, "Intel"));
         count = 5;
-        writeToFile("src/ss17_IOBinaryFile/Exercise/Bai1/Target", list );
+
     }
 
     public static void writeToFile(String path, List<Product> products) {
@@ -147,6 +147,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        writeToFile("src/ss17_IOBinaryFile/Exercise/Bai1/Target", list );
         List<Product> productsDataFromFile = readDataFromFile("src/ss17_IOBinaryFile/Exercise/Bai1/Target");
         for (Product product : productsDataFromFile){
             System.out.println(product);
