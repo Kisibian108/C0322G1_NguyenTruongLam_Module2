@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class CopyFileText {
     public static void main(String[] args) {
-        String source = "src/ss16_IOTextfile/Exercise/Source/Source";
+        String source = "src/ss16_IOTextfile/Exercise/Target/Source";
         String target = "src/ss16_IOTextfile/Exercise/Target/Target";
         readFile(source, target);
     }
