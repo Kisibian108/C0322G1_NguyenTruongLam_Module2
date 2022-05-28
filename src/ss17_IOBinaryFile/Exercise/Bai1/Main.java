@@ -1,4 +1,4 @@
-package CRUD.Production;
+package ss17_IOBinaryFile.Exercise.Bai1;
 
 
 import java.io.*;
@@ -7,18 +7,45 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static Product[] productList = new Product[100];
+
     public static int count;
     static Scanner scanner = new Scanner(System.in);
-
+    static List<Product> list = new ArrayList<>();
     static {
         System.out.println("Block static");
-        productList[0] = new Product(1, "Iphone", 1000, 10, "Apple");
-        productList[1] = new Product(2, "Xiaomi", 500, 5, "China");
-        productList[2] = new Product(3, "Macbook", 900, 8, "Apple");
-        productList[3] = new Product(4, "GalaxyS3", 700, 7, "Samsung");
-        productList[4] = new Product(5, "Dell", 300, 5, "Intel");
+        list.add(new Product(1, "Iphone", 1000, 10, "Apple"));
+        list.add(new Product(2, "Xiaomi", 500, 5, "China"));
+        list.add(new Product(3, "Macbook", 900, 8, "Apple"));
+        list.add(new Product(4, "GalaxyS3", 700, 7, "Samsung"));
+        list.add(new Product(5, "Dell", 300, 5, "Intel"));
         count = 5;
+        writeToFile("src/ss17_IOBinaryFile/Exercise/Bai1/Target", list );
+    }
+
+    public static void writeToFile(String path, List<Product> products) {
+        try {
+            FileOutputStream fos = new FileOutputStream(path);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(products);
+            oos.close();
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static List<Product> readDataFromFile(String path){
+        List<Product> list = new ArrayList<>();
+        try{
+            FileInputStream fis = new FileInputStream(path);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            list = (List<Product>) ois.readObject();
+            fis.close();
+            ois.close();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return list;
     }
 
     public static void addNewProduct() {
@@ -36,15 +63,14 @@ public class Main {
 
         System.out.println("Them san pham thanh cong!");
 
-        Product product = new Product(count + 1, name, price, amount, production);
-        ;
-        productList[count] = product;
+        list.add(new Product(count + 1, name, price, amount, production));
+
         count++;
         displayList();
     }
 
     public static void displayList() {
-        for (Product item : productList) {
+        for (Product item : list) {
             if (item != null) {
                 System.out.println(item);
             }
@@ -54,7 +80,7 @@ public class Main {
     public static void edit() {
         System.out.println("Nhap ID muon sua: ");
         int id = Integer.parseInt(scanner.nextLine());
-        for (Product item : productList) {
+        for (Product item : list) {
             if (item.getId() == id) {
                 item.setId(id);
 
@@ -83,13 +109,22 @@ public class Main {
     public static void delete() {
         System.out.println("Nhap id muon xoa: ");
         int id = Integer.parseInt(scanner.nextLine());
-        for (int i = id - 1; i < productList.length - 1; i++) {
-            productList[i] = productList[i + 1];
+        try {
+            for (int i = 0; i < list.size(); i++) {
+                if(id == list.get(i).getId()){
+                    list.remove(i);
+                    break;
+                }
+            }
+            displayList();
+        } catch (IndexOutOfBoundsException e){
+            System.out.println("ID vuot qua list");
         }
+
     }
 
     private static boolean checkNameExists(String name) {
-        for (Product item : productList) {
+        for (Product item : list) {
             if (item != null && item.getName().contains(name)) {
                 return true;
             }
@@ -101,7 +136,7 @@ public class Main {
         System.out.println("Nhap ten can tim kiem: ");
         String name = scanner.nextLine();
         if (checkNameExists(name)) {
-            for (Product item : productList) {
+            for (Product item : list) {
                 if (item != null && item.getName().contains(name)) {
                     System.out.println(item);
                 }
@@ -112,6 +147,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        List<Product> productsDataFromFile = readDataFromFile("src/ss17_IOBinaryFile/Exercise/Bai1/Target");
+        for (Product product : productsDataFromFile){
+            System.out.println(product);
+        }
         do {
             System.out.println("------------Production Management---------");
             System.out.println("1. Display list Product");
@@ -142,6 +181,5 @@ public class Main {
                     System.exit(0);
             }
         } while (true);
-
     }
 }
