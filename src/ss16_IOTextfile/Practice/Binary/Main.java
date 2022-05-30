@@ -1,4 +1,4 @@
-package ss16_IOTextfile.Practice;
+package ss16_IOTextfile.Practice.Binary;
 
 import java.io.File;
 import java.io.FileInputStream;

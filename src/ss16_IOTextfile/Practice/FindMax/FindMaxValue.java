@@ -1,6 +1,4 @@
-package ss16_IOTextfile.Practice;
-
-import ss16_IOTextfile.Practice.ReadAndWriteFile;
+package ss16_IOTextfile.Practice.FindMax;
 
 import java.util.List;
 

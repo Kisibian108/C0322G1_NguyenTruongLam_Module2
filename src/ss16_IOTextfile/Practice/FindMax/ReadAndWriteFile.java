@@ -1,4 +1,4 @@
-package ss16_IOTextfile.Practice;
+package ss16_IOTextfile.Practice.FindMax;
 
 import java.io.*;
 import java.util.ArrayList;

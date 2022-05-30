@@ -1,4 +1,4 @@
-package ss17_IOBinaryFile.Bai2;
+package ss17_IOBinaryFile.Practice.Bai2;
 
 import java.io.*;
 import java.util.ArrayList;

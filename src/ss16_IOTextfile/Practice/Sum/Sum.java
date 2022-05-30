@@ -1,4 +1,4 @@
-package ss16_IOTextfile.Practice;
+package ss16_IOTextfile.Practice.Sum;
 
 import java.io.BufferedReader;
 import java.io.File;
